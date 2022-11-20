@@ -1,0 +1,183 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+.recept-meta {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+    font-size: 14px;
+}
+
+.recept-kategorie {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.recept-komentare {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.recept-nazev {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+    font-size: 28px;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+}
+
+.recepty .recept-nazev {
+    font-size: 18px;
+}
+
+.doporucujeme {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+.hlavni-recept {
+    min-height: 200px;
+    background-image: url("images/burger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 100%;
+    position: relative;
+    gap: 10px;
+}
+
+.recepty {
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.recept {
+    min-height: 90px;
+    background-size: cover;
+    position: relative;
+    flex: 1 1 100%;
+
+}
+
+.recept2 {
+    background-image: url("images/sushi.jpg");
+}
+
+.recept3 {
+    background-image: url("images/kure.jpg");
+}
+
+.recept4 {
+    background-image: url("images/rajcata.jpg");
+}
+
+.recept5 {
+    background-image: url("images/grilovani.jpg");
+}
+
+@media (min-width: 480px) {
+    .doporucujeme {
+        gap: 20px;
+    }
+    .hlavni-recept {
+        min-height: 250px;
+    }
+    
+    .recept {
+        min-height: 150px;
+    }
+
+    .recept-nazev {
+        font-size: 36px;
+    }
+
+    .recepty .recept-nazev {
+        font-size: 22px;
+    }
+
+    .recepty {
+        flex-flow: row wrap;
+        gap: 20px
+    }
+    
+    .recept {
+        flex: 1 1 45%;
+    }
+}
+
+@media (min-width: 860px) {
+    .doporucujeme {
+        flex-flow: row;
+    }
+    
+    .hlavni-recept {
+        min-height: 400px;
+        flex: 1 1 45%;
+    }
+    
+    .recepty {
+        flex: 1 1 45%;
+    }
+    .recept {
+        min-height: 200px;
+    }
+
+    .recept-nazev {
+        font-size: 48px;
+    }
+
+    .recepty .recept-nazev {
+        font-size: 28px;
+    }
+
+}
