@@ -109,6 +109,13 @@ body {
 
 }
 
+.hlavni-recept,
+.recept {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .recept2 {
     background-image: url("images/sushi.jpg");
 }
@@ -126,9 +133,7 @@ body {
 }
 
 @media (min-width: 480px) {
-    .doporucujeme {
-        gap: 20px;
-    }
+    
     .hlavni-recept {
         min-height: 250px;
     }
@@ -147,7 +152,6 @@ body {
 
     .recepty {
         flex-flow: row wrap;
-        gap: 20px
     }
     
     .recept {
@@ -170,6 +174,7 @@ body {
     }
     .recept {
         min-height: 200px;
+	margin: 2px;
     }
 
     .recept-nazev {
